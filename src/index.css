@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #0a0a0f;
+  --color-foreground: #e4e4e7;
+  --color-card: #12121a;
+  --color-card-foreground: #e4e4e7;
+  --color-popover: #12121a;
+  --color-popover-foreground: #e4e4e7;
+  --color-primary: #f59e0b;
+  --color-primary-foreground: #0a0a0f;
+  --color-secondary: #1e1e2e;
+  --color-secondary-foreground: #e4e4e7;
+  --color-muted: #1e1e2e;
+  --color-muted-foreground: #9ca3af;
+  --color-accent: #292940;
+  --color-accent-foreground: #e4e4e7;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #e4e4e7;
+  --color-border: #2e2e3e;
+  --color-input: #2e2e3e;
+  --color-ring: #f59e0b;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --radius: 0.5rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions for dynamic data */
+.transition-data {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Pulse animation for connection indicator */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Tabular numbers for data */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
