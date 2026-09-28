@@ -31,3 +31,8 @@ coverage/
 
 # Misc
 *.local
+
+# Documentación sensible (credenciales, IPs, etc.)
+PROJECT_CONTEXT.md
+DEPLOY_NOTES.md
+*.secrets.md
