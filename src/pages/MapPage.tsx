@@ -74,15 +74,15 @@ export function MapPage() {
   const { data } = useDashboard()
   const { settings } = useSettings()
   const [activeLayers, setActiveLayers] = useState<Record<LayerName, boolean>>({
-    players: true,
+    players: false,
     factories: true,
-    extractors: true,
-    generators: true,
-    markers: true,
-    cables: true,
-    pipes: true,
-    slugs: true,
-    artifacts: true,
+    extractors: false,
+    generators: false,
+    markers: false,
+    cables: false,
+    pipes: false,
+    slugs: false,
+    artifacts: false,
     droppods: false,
   })
   const [layerPanelOpen, setLayerPanelOpen] = useState(false)
